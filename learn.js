@@ -1,6 +1,10 @@
-function factorialize(num) {
-    if (num === 1 || num === 0) return 1;
-    return num * factorialize(num - 1);
-}
+const findLongestWordLength = (str) => {
+    let length = 0;
+    const arr = str.split(" ");
+    for(let index in arr){
+        if (length < arr[index].length) length = arr[index].length;
+    }
+    return length;
+};
 
-console.log(factorialize(5));
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
