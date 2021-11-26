@@ -1,8 +1,5 @@
-function findElement(arr, func) {
-    for(let index in arr){
-        if (func(arr[index])) return arr[index];
-    }
-    return undefined;
+function booWho(bool) {
+    return typeof(bool) === "boolean";
 }
 
-console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
+console.log(booWho(false));
