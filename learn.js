@@ -1,11 +1,6 @@
-function repeatStringNumTimes(str, num) {
-    if (num < 1) return "";
-    let out = "";
-    while (num > 0) {
-        out += str;
-        num--;
-    }
-    return out;
+function truncateString(str, num) {
+    if (num >= str.length) return str;
+    return str.slice(0,num)+"...";
 }
 
-console.log(repeatStringNumTimes("abc", 3));
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
