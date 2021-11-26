@@ -1,5 +1,6 @@
-function reverseString(str) {
-    return str.split('').reverse().join("");
+function factorialize(num) {
+    if (num === 1 || num === 0) return 1;
+    return num * factorialize(num - 1);
 }
 
-console.log(reverseString("hello"));
+console.log(factorialize(5));
