@@ -1,6 +1,8 @@
-function truncateString(str, num) {
-    if (num >= str.length) return str;
-    return str.slice(0,num)+"...";
+function findElement(arr, func) {
+    for(let index in arr){
+        if (func(arr[index])) return arr[index];
+    }
+    return undefined;
 }
 
-console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
