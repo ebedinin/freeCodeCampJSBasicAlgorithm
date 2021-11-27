@@ -1,11 +1,5 @@
-function titleCase(str) {
-    const arr = str.toLowerCase().split(" ");
-    for(let i=0;i<arr.length;i++){
-        const word = arr[i].split('');
-        word[0]=word[0].toUpperCase();
-        arr[i] = word.join('');
-    }
-    return arr.join(' ');
+function frankenSplice(arr1, arr2, n) {
+    return [...arr2.slice(0,n),...arr1,...arr2.slice(n)]
 }
 
-console.log(titleCase("I'm a little tea pot"));
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
