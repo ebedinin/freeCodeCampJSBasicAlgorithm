@@ -1,5 +1,7 @@
-function frankenSplice(arr1, arr2, n) {
-    return [...arr2.slice(0,n),...arr1,...arr2.slice(n)]
+function bouncer(arr) {
+    return arr.filter((item)=>{
+        return Boolean(item);
+    });
 }
 
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+console.log(bouncer([7, "ate", "", false, 9]));
