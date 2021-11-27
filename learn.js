@@ -1,12 +1,9 @@
-function getIndexToIns(arr, num) {
-    arr = arr.sort((a, b) => a - b);
-    if (arr.length === 0) return 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] >= num) return i;
+function mutation(arr) {
+    arr = [arr[0].toUpperCase(),arr[1].toUpperCase()];
+    for(let i =0; i<arr[1].length;i++) {
+        if (arr[0].indexOf(arr[1][i]) === -1) return false;
     }
-    return arr.length;
+    return true;
 }
 
-
-console.log(getIndexToIns([5, 3, 20, 3], 5));
-console.log(getIndexToIns([2, 20, 10], 19));
+console.log(mutation(["helloy", "hey"]));
